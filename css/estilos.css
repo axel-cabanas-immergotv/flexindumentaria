@@ -60,7 +60,7 @@ main {
     left: 0;
     opacity: 0.94;
     z-index: -1;
-    background: linear-gradient(-47deg, #636823 0%, #492f17 100%);
+    background: linear-gradient(-47deg, #4d4a21 10%, #352414 100%);
 }
 
 .hero__inicio {
@@ -111,7 +111,8 @@ main {
 }
 
 .btn:hover {
-    background-image: linear-gradient(-47deg, #1b1b10 0%, #36281c 100%);
+    background-image: linear-gradient(-47deg, #0f0f0d 0%, #1a1512 100%);
+    color: #ad984b;
 }
 
 .hero__videos {
@@ -425,8 +426,8 @@ ul li {
 /* Animaciones */
 
 .header__logo {
-	-webkit-animation: scale-up-center 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite alternate-reverse both;
-	        animation: scale-up-center 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite alternate-reverse both;
+	-webkit-animation: scale-up-center 3.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite alternate-reverse both;
+	        animation: scale-up-center 3.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite alternate-reverse both;
 }
 
 @-webkit-keyframes scale-up-center {
