@@ -6,11 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acerca de</title>
     <link rel="stylesheet" href="../css/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg container-principal">
+            <div class="container-fluid navBs-center">
+              <img class="navbar-brand header__logo" src="../assets/logoflex.png" alt="">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse header__menu" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="header__items" aria-current="page" href="../index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="header__items" href="../servicios/contacto.html">Contacto</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="header__items" href="../servicios/ayuda.html" >Ayuda</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+</header>
     <main>
         <div class="hero__inicio-contenedor seccion__padding">
-            <article class="hero__inicio container text__aling">
+            <article class="hero__inicio container-principal text__aling">
                 <h1 class="hero__inicio-titulo">Acerca de</h1>
                 <h1 class="hero__aboutUs-titulo2">Flex Indumentaria</h1>
                 <div class="hero__inicio-text">
@@ -21,7 +45,7 @@
         </div>
     </main>
     <footer class="seccion__padding">
-        <section class="footer__cont container">
+        <section class="footer__cont container-principal">
             <div class="footer__redes">
                 <a href=""><img class="footer__icon" src="../assets/logo_facebook.svg" alt="logo Facebook"></a>   
                 <a href=""><img class="footer__icon" src="../assets/logo_instagram.svg" alt="logo Instagram"></a>
@@ -36,5 +60,6 @@
             <img class="footer__logo" src="../assets/logoFlex-black.jpeg" alt="logo FlexIndumentaria">
         </section>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

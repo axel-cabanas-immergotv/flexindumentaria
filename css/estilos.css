@@ -8,7 +8,7 @@ body {
     box-sizing: border-box;
 }
 
-.container {
+.container-principal {
     width: 1112px;
     margin: 0 auto;
 }
@@ -97,7 +97,7 @@ main {
     font-weight: 700;
 }
 
-.btn {
+.btn-hero {
     color: #fff;
     border: 2px solid #36281c;
     border-radius: 30px;
@@ -110,7 +110,7 @@ main {
     font-weight: 600;
 }
 
-.btn:hover {
+.btn-hero:hover {
     background-image: linear-gradient(-47deg, #0f0f0d 0%, #1a1512 100%);
     color: #ad984b;
 }
@@ -192,7 +192,7 @@ main {
 
 .hero__galeria-parrafo {
     color: rgb(231, 231, 231);
-    width: 200px;
+    width: 210px;
     margin: 20px;
 }
 
@@ -324,6 +324,10 @@ ul li {
     color: #000;
 }
 
+.precio__text:hover {
+    color: #ad984b;
+}
+
 /* Seccion contacto */
 
 .datos {
@@ -409,7 +413,7 @@ ul li {
 
 .hero__ayuda a {
     padding: 0 20px;
-    color: #fff;
+    color: #fff !important;
     text-decoration: none;
     font-size: 18px;
     font-weight: 600;
@@ -452,10 +456,63 @@ ul li {
   }
   
 
+/* Seccion estilos Bootstrap */
+
+.btnBs {
+    padding: 18px 30px !important;
+}
+
+.btnBs-colors {
+    color: rgb(176, 158, 128) !important;
+    border-color: rgb(176, 158, 128) !important;
+    margin: auto !important;
+}
+
+.btnBs-colors:hover {
+    color: #fff !important;
+    background-color: rgb(176, 158, 128) !important;
+    border-color: rgb(176, 158, 128) !important;
+}
+
+.btnBs-border {
+    border-color: rgb(176, 158, 128) !important;
+    box-shadow: 0 0 0 0.25rem rgb(176 158 128 / 25%) !important;
+}
+
+.btnBs-margin {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.navBs-center {
+    width: auto !important;
+}
+
+.carouselBs {
+    text-align: center;
+    padding: 30px 31px;
+    background-color: rgb(176, 158, 128);
+    border-radius: 10px;
+    margin: 50px;
+}
+
+.carouselBs__img{
+    width: 350px;
+    height: 430px;
+    margin: 0 auto;
+}
+
+.carouselBs__parrafo {
+    color: rgb(231, 231, 231);
+    width: 230px;
+    margin: 20px auto;
+    font-size: 18px;
+}
+
 /* Media Queries */
 
 @media screen and (max-width: 1024px) {
-    .container {
+    .container-principal {
         width: auto;
         height: auto;
     }
@@ -468,7 +525,7 @@ ul li {
 
     .hero__fullImg{
         padding: 15px 6px;
-        max-width: 50%;
+        max-width: 100%;
     }
     .hero__galeria-parrafo {
         width: auto;
@@ -477,7 +534,7 @@ ul li {
 }
 
 @media screen and (max-width: 768px) {
-    .container {
+    .container-principal {
         width: auto;
         height: auto;
     }
@@ -502,7 +559,7 @@ ul li {
         flex-direction: column;
     }
     .hero__fullImg {
-        max-width: 75%;
+        max-width: 100%;
     }
     .footer__cont {
         flex-direction: column-reverse;
@@ -512,6 +569,11 @@ ul li {
     }
     .footer__logo {
         margin: 0 0 15px 0;
+    }
+    .carouselBs__img {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
     }
 }
 
@@ -539,8 +601,11 @@ ul li {
         margin: 0;
         padding: 0;
     }
-    .hero__img {
+    .hero__img, .carouselBs__img {
         width: 100%;
         height: auto;
+    }
+    .carouselBs__parrafo {
+        width: auto;
     }
 }
