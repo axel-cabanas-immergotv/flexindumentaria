@@ -165,6 +165,8 @@ main {
 
 .hero__galeria {
     padding: 0 0 100px 0;
+    display: flex;
+    justify-content: center;
 }
 
 .hero__imagenes {
@@ -173,7 +175,7 @@ main {
 }
 
 .hero__fullImg{
-    padding: 0 15px;
+    padding: 15px;
     /* max-width: 50%; */
 }
 
@@ -186,8 +188,8 @@ main {
 }
 
 .hero__img {
-    width: 250px;
-    height: 340px;
+    width: 100%;
+    
 }
 
 .hero__galeria-parrafo {
@@ -455,6 +457,39 @@ ul li {
     }
   }
   
+.hero__img-compra:hover {
+	-webkit-animation: kenburns-top 1s ease-out both;
+	        animation: kenburns-top 1s ease-out both;
+}
+
+@-webkit-keyframes kenburns-top {
+    0% {
+      -webkit-transform: scale(1) translateY(0);
+              transform: scale(1) translateY(0);
+      -webkit-transform-origin: 50% 16%;
+              transform-origin: 50% 16%;
+    }
+    100% {
+      -webkit-transform: scale(1) translateY(-15px);
+              transform: scale(1) translateY(-15px);
+      -webkit-transform-origin: top;
+              transform-origin: top;
+    }
+  }
+  @keyframes kenburns-top {
+    0% {
+      -webkit-transform: scale(1) translateY(0);
+              transform: scale(1) translateY(0);
+      -webkit-transform-origin: 50% 16%;
+              transform-origin: 50% 16%;
+    }
+    100% {
+      -webkit-transform: scale(1) translateY(-15px);
+              transform: scale(1) translateY(-15px);
+      -webkit-transform-origin: top;
+              transform-origin: top;
+    }
+  }
 
 /* Seccion estilos Bootstrap */
 
@@ -511,7 +546,7 @@ ul li {
 
 /* Media Queries */
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
     .container-principal {
         width: auto;
         height: auto;
@@ -533,7 +568,23 @@ ul li {
     }
 }
 
+@media screen and (max-width: 992px) {
+    .footer__links {
+        margin: 0;
+    }
+}
+
 @media screen and (max-width: 768px) {
+    .d-flex {
+        margin: 20px;
+        flex-direction: column;
+    }
+    .marginR-0 {
+        margin: 0 auto !important;
+    }
+    .navbar-flex {
+        flex-direction: column !important;
+    }
     .container-principal {
         width: auto;
         height: auto;
@@ -552,6 +603,13 @@ ul li {
     .footer__links {
         margin: 0;
     }
+    .footer__items {
+        padding: 10px 20px;
+        display: flex;
+    }
+    .btnBs-colors {
+        margin: 10px !important;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -567,6 +625,9 @@ ul li {
     .footer__links {
         margin: 15px 0 30px 0;
     }
+    .footer__items {
+        padding: 12px;
+    }
     .footer__logo {
         margin: 0 0 15px 0;
     }
@@ -579,7 +640,7 @@ ul li {
 
 @media screen and (max-width: 375px) {
     .header__menu a {
-        padding: 0 4px;
+        padding: 0 12px;
     }
     .hero__videoMarca-container {
         flex-direction: column; 
