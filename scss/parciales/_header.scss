@@ -1,5 +1,5 @@
 .header {
-    background-color: #000;
+    background-color: $colorBlack;
     padding: 15px 0;
     
     &__contenedor {
@@ -24,7 +24,7 @@
     
             }
             .header__items:hover {
-                color: #fff;
+                color: $colorWhite;
             }
         }
     }
