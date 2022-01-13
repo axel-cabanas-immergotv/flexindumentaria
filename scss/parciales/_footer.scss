@@ -1,0 +1,34 @@
+footer {
+    background-color: rgb(176, 158, 128);
+
+    .footer__cont {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .footer__icon {
+            margin: 0 15px;
+            width: 40px;
+            height: auto;
+        }
+
+        .footer__links {
+            margin: 0 100px;
+
+            & a {
+                text-decoration: none;
+                color: #000;
+                font-size: 18px;
+                font-weight: 600;
+            }
+
+            .footer__items {
+                padding: 0 20px;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

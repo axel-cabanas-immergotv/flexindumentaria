@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FlexIndumentaria</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="./scss/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,37 +27,37 @@
             </div>
         </header>
         <main>
-            <div class="hero__inicio-contenedor seccion__padding">
-                <article class="hero__inicio container-principal text__aling">
-                    <h1 class="hero__inicio-titulo">Flex</h1>
-                    <p class="hero__titulo2">Indumentaria</p>
-                    <div class="hero__inicio-text">
-                        <p class="hero__inicio-parrafo">Lorem ipsum dolor sit.</p>
-                        <button class="btn-hero" href="#">COMPRAR</button>
-                    </div>
-                </article>
-            </div>
-            <section class="hero__videos">
-                <div class="container-principal seccion__padding">
-                    <div class="hero__videoMarca-container">
-                        <video class="hero__videoMarca" src="./assets/videoMarca.mp4" controls>
-                            <code>No soporta video</code>
-                        </video>
-                        <ul class="hero__parrafos">
-                            <li class="hero__parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat natus consequuntur quis qui, quibusdam deserunt minus ea porro ipsum modi.</li>
-                            <li class="hero__parrafo">Aut natus, ipsam fugit placeat magni voluptates dolor molestiae pariatur quas nam sed nesciunt ea quod, tenetur possimus consectetur animi?</li>
-                        </ul>
-                    </div>
-                    <div class="linea"></div>
-                    <div class="hero__videoMarcaYt seccion__padding">
-                        <p class="hero__videoMarcaYt-parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias consequuntur assumenda eum vel iure totam! Facere, itaque dicta? Quod delectus officia nemo repellendus totam velit?</p>
-                        <iframe class="videoYt" width="560" height="315" src="https://www.youtube.com/embed/is6O29gQde8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                            <code>No soporta video</code>
-                        </iframe>
-                    </div>
-                    
+                <div class="hero__inicio-contenedor seccion__padding">
+                    <article class="hero__inicio container-principal text__aling">
+                        <h1 class="hero__inicio-titulo">Flex</h1>
+                        <p class="hero__inicio-titulo2">Indumentaria</p>
+                        <div class="hero__inicio-text">
+                            <p class="hero__inicio-parrafo">Lorem ipsum dolor sit.</p>
+                            <button class="btn-hero" href="#">COMPRAR</button>
+                        </div>
+                    </article>
                 </div>
-            </section>
+                <div class="hero__videos">
+                    <div class="container-principal seccion__padding">
+                        <div class="hero__videoMarca-container">
+                            <video class="hero__videoMarca" src="./assets/videoMarca.mp4" controls>
+                                <code>No soporta video</code>
+                            </video>
+                            <ul class="hero__parrafos">
+                                <li class="hero__parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat natus consequuntur quis qui, quibusdam deserunt minus ea porro ipsum modi.</li>
+                                <li class="hero__parrafo">Aut natus, ipsam fugit placeat magni voluptates dolor molestiae pariatur quas nam sed nesciunt ea quod, tenetur possimus consectetur animi?</li>
+                            </ul>
+                        </div>
+                        <div class="linea"></div>
+                        <div class="hero__videoMarcaYt seccion__padding">
+                            <p class="hero__videoMarcaYt-parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias consequuntur assumenda eum vel iure totam! Facere, itaque dicta? Quod delectus officia nemo repellendus totam velit?</p>
+                            <iframe class="videoYt" width="560" height="315" src="https://www.youtube.com/embed/is6O29gQde8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                                <code>No soporta video</code>
+                            </iframe>
+                        </div>
+                        
+                    </div>
+                </div>
             
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                 <div class="container-principal ">
@@ -67,19 +67,19 @@
                       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div>
                     <div class="carousel-inner">
-                      <div class="carousel-item active  hero__fullImg">
+                      <div class="carousel-item active  carousel-container">
                         <div class="carouselBs">
                             <img src="./assets/diseño1.png" class="d-block carouselBs__img" alt="...">
                             <p class="carouselBs__parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ab eveniet voluptates, quo dignissimos totam assumenda maxime nostrum asperiores blanditiis!</p>
                         </div>
                       </div>
-                      <div class="carousel-item hero__fullImg">
+                      <div class="carousel-item carousel-container">
                         <div class="carouselBs">
                             <img src="./assets/diseño2.png" class="d-block carouselBs__img" alt="...">
                             <p class="carouselBs__parrafo">Tempore, quas reprehenderit omnis magnam doloremque debitis a odit sapiente illum placeat nesciunt eveniet aspernatur iusto iure adipisci, reiciendis quidem.</p>
                         </div>
                       </div>
-                      <div class="carousel-item hero__fullImg">
+                      <div class="carousel-item carousel-container">
                         <div class="carouselBs">
                             <img src="./assets/diseño3.png" class="d-block carouselBs__img" alt="...">
                             <p class="carouselBs__parrafo">Omnis esse beatae architecto dolor illo iure quam amet aspernatur quaerat corrupti rem tempore excepturi aut, deleniti repellat. Soluta, eveniet.</p>

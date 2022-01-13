@@ -67,12 +67,6 @@ main {
     padding: 90px 0px 65px;
 }
 
-.hero__inicio-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .hero__inicio-titulo {
     color: #fff;
     font-size: 4.375rem;
@@ -81,7 +75,7 @@ main {
     margin: 0;
 }
 
-.hero__titulo2 {
+.hero__inicio-titulo2 {
     color: #fff;
     font-size: 35px;
     font-weight: 600;
@@ -89,6 +83,13 @@ main {
     margin: 0;
     
 }
+
+.hero__inicio-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 .hero__inicio-parrafo {
     margin: 60px 0;
@@ -174,7 +175,7 @@ main {
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.hero__fullImg{
+.carousel-container{
     padding: 15px;
     /* max-width: 50%; */
 }
