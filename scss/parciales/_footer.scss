@@ -1,25 +1,27 @@
+@import "./variables";
+
+
 footer {
-    background-color: rgb(176, 158, 128);
+    background-color: $colorBg;
 
     .footer__cont {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        display: map-get($estilos, display);
+        align-items: map-get($estilos, align-items);
+        justify-content: map-get($estilos, justify-content);
 
         .footer__icon {
             margin: 0 15px;
-            width: 40px;
-            height: auto;
+            @include sizes(40px, auto);
         }
 
         .footer__links {
             margin: 0 100px;
 
             & a {
-                text-decoration: none;
+                text-decoration: map-get($estilos, text-decoration);
                 color: $colorBlack;
                 font-size: 18px;
-                font-weight: 600;
+                font-weight: map-get($font-weights, medium);
             }
 
             .footer__items {

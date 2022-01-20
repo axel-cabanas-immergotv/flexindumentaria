@@ -307,6 +307,11 @@ ul li {
     padding: 30px;
 }
 
+.compra__parrafo {
+    text-align: center;
+    margin: 0;
+    padding-top: 1rem;
+}
 
 .compra__precio {
     text-align: center;
@@ -320,6 +325,7 @@ ul li {
 .hero__img-compra {
     background-color: #fff;
     box-shadow: 0 8px 10px rgb(0 0 0 / 12%);
+    margin: 25px 0 0 0;
 }
 
 .hero__img-compra a {

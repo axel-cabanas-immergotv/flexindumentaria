@@ -1,0 +1,23 @@
+@mixin sizes($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin flex($flex, $justify-content, $align-items, $flex-direction) {
+    display: $flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-direction: $flex-direction;
+}
+
+@mixin box-size($padding, $margin) {
+    padding: $padding;
+    margin: $margin;
+}
+
+@mixin text($size, $weight, $letter-spacing, $line-height) {
+    font-size: $size;
+    font-weight: $weight;
+    letter-spacing: $letter-spacing;
+    line-height: $line-height;
+}

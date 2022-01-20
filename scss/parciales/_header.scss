@@ -1,15 +1,16 @@
+@import "./variables";
+@import "./animaciones";
+@import "./mixins";
+
 .header {
     background-color: $colorBlack;
     padding: 15px 0;
     
     &__contenedor {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flex(flex, space-between, center, null);
         
         .header__logo {
-            width: 120px;
-            height: auto;
+            @include sizes(120px, auto);
             border-radius: 5px;
         }
         
@@ -17,10 +18,9 @@
 
             & a {
                 padding: 0 20px;
-                color: #ad984b;
+                color: $colorBg;
                 text-decoration: none;
-                font-size: 18px;
-                font-weight: 600;
+                @include text(18px, 600, null, null);
     
             }
             .header__items:hover {

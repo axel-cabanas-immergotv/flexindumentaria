@@ -1,0 +1,124 @@
+@media screen and (max-width: 1200px) {
+    .container-principal {
+        width: auto;
+        height: auto;
+    }
+    
+    .hero__imagenes {
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr;
+    }
+
+    .hero__fullImg{
+        padding: 15px 6px;
+        max-width: 100%;
+    }
+    .hero__galeria-parrafo {
+        width: auto;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .footer__links {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .d-flex {
+        margin: 20px;
+        flex-direction: column;
+    }
+    .marginR-0 {
+        margin: 0 auto !important;
+    }
+    .navbar-flex {
+        flex-direction: column !important;
+    }
+    .container-principal {
+        width: auto;
+        height: auto;
+    }
+    .hero__imagenes {
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr;
+    }
+    .hero__fullImg {
+        padding: 25px 0px;
+    }
+    .footer__redes {
+        display: flex;
+    }
+    .footer__links {
+        margin: 0;
+    }
+    .footer__items {
+        padding: 10px 20px;
+        display: flex;
+    }
+    .btnBs-colors {
+        margin: 10px !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header__contenedor {
+        flex-direction: column;
+    }
+    .hero__fullImg {
+        max-width: 100%;
+    }
+    .footer__cont {
+        flex-direction: column-reverse;
+    }
+    .footer__links {
+        margin: 15px 0 30px 0;
+    }
+    .footer__items {
+        padding: 12px;
+    }
+    .footer__logo {
+        margin: 0 0 15px 0;
+    }
+    .carouselBs__img {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .header__menu a {
+        padding: 0 12px;
+    }
+    .hero__videoMarca-container {
+        flex-direction: column; 
+    }
+    .hero__videoMarca, .hero__parrafos {
+        width: 80%;
+    }
+    .hero__parrafos {
+        padding: 0;
+        margin: 0;
+    }
+    .hero__videoMarcaYt {
+        flex-direction: column-reverse;
+    }
+    .hero__videoMarcaYt-parrafo, .videoYt {
+        width: 80%;
+    }
+    .hero__videoMarcaYt-parrafo {
+        margin: 0;
+        padding: 0;
+    }
+    .hero__img, .carouselBs__img {
+        width: 100%;
+        height: auto;
+    }
+    .carouselBs__parrafo {
+        width: auto;
+    }
+}
