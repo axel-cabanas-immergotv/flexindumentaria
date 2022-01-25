@@ -114,12 +114,12 @@ main {
             background-color: $colorBg;
             border-radius: 10px;
     
-            .carouselBs__img{
+            &__img{
                 @include sizes(350px, 430px);
                 @include box-size(auto, 0 auto);
             }
     
-            .carouselBs__parrafo {
+            &__parrafo {
                 color: $colorWhite;
                 @include box-size(auto, 20px auto);
                 @include sizes(230px, auto);
