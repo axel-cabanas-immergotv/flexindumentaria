@@ -84,7 +84,7 @@ main {
             
             .linea {
                 content: "";
-                @include sizes(68.75rem, 2px);
+                @include sizes(auto, 2px);
                 background-color: #3f3636;
                 margin: 100px 0 0;
             }

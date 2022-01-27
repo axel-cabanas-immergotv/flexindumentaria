@@ -232,7 +232,7 @@ main .hero__videos .hero__videoMarca-container .hero__parrafos .hero__parrafo, m
 
 main .hero__videos .linea {
   content: "";
-  width: 68.75rem;
+  width: auto;
   height: 2px;
   background-color: #3f3636;
   margin: 100px 0 0;
