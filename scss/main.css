@@ -504,4 +504,80 @@ footer .footer__cont .footer__links .footer__items {
 footer .footer__cont .footer__links .footer__items:hover {
   color: #fff;
 }
+
+.header .navBs-center {
+  width: auto !important;
+}
+
+.form {
+  background-color: #000;
+  color: #fff;
+}
+
+.form .datos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: none;
+}
+
+.form .datos__titulo {
+  font-family: 'Playfair Display';
+  font-size: 30px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.form .datos__contenedor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px 0;
+}
+
+.form .datos__contenedor .datos__form {
+  font-size: 14px;
+  padding: 15px;
+  border: none;
+  border-radius: 0;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  width: 400px;
+}
+
+.form .datos__botones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form .datos__botones .datos-btn {
+  margin: 15px;
+  width: 150px;
+  height: 50px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  border: 2px solid #b09e80;
+  background: none;
+  cursor: pointer;
+}
+
+.form .datos__botones .datos-btn:hover {
+  background-color: #b09e80;
+}
 /*# sourceMappingURL=main.css.map */

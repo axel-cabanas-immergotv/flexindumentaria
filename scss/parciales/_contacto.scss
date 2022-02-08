@@ -1,0 +1,71 @@
+@import "./variables";
+@import "./mixins";
+
+.header {
+
+    .navBs-center {
+        width: auto !important;
+
+        .header__logo {
+            
+        }
+    }
+}
+
+.form {
+    background-color: #000;
+    color: #fff;
+
+    .datos {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        border: none;
+
+        &__titulo {
+            font-family: 'Playfair Display';
+            font-size: 30px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        &__contenedor {
+            display: flex;
+            padding: 15px 0;
+
+            .datos__form {
+                font-size: 14px;
+                padding: 15px;
+                border: none;
+                border-radius: 0;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+                font-weight: 400;
+                line-height: 1.5;
+                color: #495057;
+                width: 400px;
+            }
+        }
+    }
+
+    .datos__botones {
+        display: flex;
+        justify-content: center;
+
+        .datos-btn {
+            margin: 15px;
+            width: 150px;
+            height: 50px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            color: #fff;
+            border: 2px solid rgb(176, 158, 128);
+            background: none;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgb(176, 158, 128);
+            }
+        }
+    }
+}
