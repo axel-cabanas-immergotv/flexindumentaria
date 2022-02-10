@@ -2,14 +2,22 @@
 @import "./mixins";
 
 .header {
-
-    .navBs-center {
-        width: auto !important;
-
         .header__logo {
-            
+            @include sizes(120px, auto);
+            border-radius: 5px;
         }
-    }
+        .header__menu {
+
+            & a {
+                padding: 0 20px;
+                color: $colorBg;
+                text-decoration: none;
+                @include text(18px, 600, null, null);
+            }
+            .header__items:hover {
+                color: $colorWhite;
+            }
+        }
 }
 
 .form {
@@ -68,4 +76,12 @@
             }
         }
     }
+}
+
+.navbar {
+    justify-content: space-around !important;
+}
+.navbar-toggler {
+    border-color: $colorBg !important;
+    color: $colorBg !important;
 }

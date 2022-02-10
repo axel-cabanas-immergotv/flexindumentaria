@@ -1,0 +1,31 @@
+@import "./variables";
+@import "./mixins";
+
+body {
+
+    .btnBs {
+        padding: 18px 30px ;
+    }
+    
+    .btnBs-colors {
+        color: rgb(176, 158, 128) ;
+        border-color: rgb(176, 158, 128) ;
+        margin: auto ;
+    }
+    
+    .btnBs-colors:hover {
+        color: #fff ;
+        background-color: rgb(176, 158, 128) ;
+        border-color: rgb(176, 158, 128) ;
+    }
+    
+    .btnBs-border {
+        border-color: rgb(176, 158, 128) ;
+        box-shadow: 0 0 0 0.25rem rgba(176, 158, 128, 0.25) ;
+    }
+    
+    .btnBs-margin {
+        width: 50%;
+        margin: 0 auto;
+    }
+}

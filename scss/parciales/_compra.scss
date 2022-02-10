@@ -1,0 +1,66 @@
+@import "./mixins";
+@import "./variables";
+@import "./BS-styles";
+
+    .bg-compra {
+        background-color: rgb(176, 158, 128);
+        padding: 100px 0 0 0;
+        
+        .hero__galeria {
+            padding: 0 0 100px 0;
+            display: flex;
+            justify-content: center;
+            
+            .hero__compra {
+                display: flex;
+                justify-content: space-around;
+                padding: 30px;
+
+                .hero__fullImg {
+                    padding: 15px 6px;
+                    max-width: 100%;
+                    
+                    .hero__img {
+
+                        &-compra {
+                            background-color: #fff;
+                            box-shadow: 0 8px 10px rgba(0, 0, 0, 0.12);
+                            margin: 25px 0 0 0;
+    
+                            & a {
+                                text-decoration: none;
+                                color: #000;
+                            }
+    
+                            .precio__text {
+    
+                                &:hover {
+                                    color: #ad984b;
+                                }
+                                .compra__parrafo {
+                                    text-align: center;
+                                    margin: 0;
+                                    padding-top: 1rem;
+                                }
+                                .compra__precio {
+                                    text-align: center;
+                                    margin: 0;
+                                    padding: 20px;
+                                    font-size: 20px;
+                                    font-weight: 600;
+                                    letter-spacing: 2px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
