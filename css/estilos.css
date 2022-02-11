@@ -48,7 +48,7 @@ main {
 .hero__inicio-contenedor {
     position: relative;
     z-index: 1;
-    background: url(../assets/diseño3.png) no-repeat fixed center center/cover;
+    background: url(../assets/diseño3.jpg) no-repeat fixed center center/cover;
 }
 
 .hero__inicio-contenedor::after {

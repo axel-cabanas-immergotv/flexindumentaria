@@ -1,0 +1,41 @@
+@import "./variables";
+@import "./mixins";
+
+body {
+
+    main {
+
+        .hero__ayuda-inicio-contenedor {
+            @extend .hero__inicio-contenedor;
+            background: url(../../assets/diseño2.jpg) no-repeat fixed center center/cover;
+            
+            & .hero__inicio h1 {
+                margin-bottom: 25px;
+            }
+
+            .hero__ayuda {
+
+                & ul {
+                    padding: 0;
+                }
+
+                & a {
+                    padding: 0 20px;
+                    color: #fff !important;
+                    text-decoration: none;
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+                
+                &-text {
+                    padding: 20px 0;
+                    
+                    &:hover {
+                        color: $colorBg;
+                    }
+                }
+            }
+        }
+    }
+    
+}
