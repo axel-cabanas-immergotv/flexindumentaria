@@ -12,7 +12,7 @@
                 padding: 0 20px;
                 color: $colorBg;
                 text-decoration: none;
-                @include text(18px, 600, null, null);
+                @include text(18px, 600, null, null, null);
             }
             .header__items:hover {
                 color: $colorWhite;
@@ -21,52 +21,43 @@
 }
 
 .form {
-    background-color: #000;
-    color: #fff;
+    background-color: $colorBlack;
+    color: $colorWhite;
 
     .datos {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
+        @include flex(flex, null, center, column);
         border: none;
 
         &__titulo {
             font-family: 'Playfair Display';
-            font-size: 30px;
-            text-align: center;
-            font-weight: 700;
+            @include text (30px, 700, null, null, center)
         }
 
         &__contenedor {
-            display: flex;
+            @include flex(flex, center, null, null);
             padding: 15px 0;
 
             .datos__form {
-                font-size: 14px;
+                @include text(14px, 400, null, 1.5, null);
                 padding: 15px;
                 border: none;
                 border-radius: 0;
                 box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
-                font-weight: 400;
-                line-height: 1.5;
-                color: #495057;
+                color: $colorGray;
                 width: 400px;
             }
         }
     }
 
     .datos__botones {
-        display: flex;
-        justify-content: center;
+        @include flex(flex, center, null, null);
 
         .datos-btn {
+            @include text(16px, 700, null, null, null);
             margin: 15px;
-            width: 150px;
-            height: 50px;
+            @include sizes(150px, 50px);
             border-radius: 8px;
-            font-size: 16px;
-            font-weight: 700;
-            color: #fff;
+            color: $colorWhite;
             border: 2px solid rgb(176, 158, 128);
             background: none;
             cursor: pointer;

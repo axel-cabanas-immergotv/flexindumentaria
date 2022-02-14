@@ -2,14 +2,7 @@
 
 @media screen and (max-width: 1200px) {
     .container-principal {
-        width: auto;
-        height: auto;
-    }
-    
-    .hero__imagenes {
-        display: grid;
-        justify-items: center;
-        grid-template-columns: 1fr;
+        @include sizes(auto, auto);
     }
 
     .hero__fullImg{
@@ -31,8 +24,7 @@
                 justify-content: space-around;
     
                 .footer__redes {
-                    display: flex;
-                    flex-direction: column;
+                    @include flex(flex, null, null, column);
     
                     .footer__icon {
                         margin: 5px;
@@ -65,13 +57,7 @@
             flex-direction: column !important;
         }
         .container-principal {
-            width: auto;
-            height: auto;
-        }
-        .hero__imagenes {
-            display: grid;
-            justify-items: center;
-            grid-template-columns: 1fr;
+            @include sizes(auto, auto);
         }
         .hero__fullImg {
             padding: 25px 0px;
@@ -82,8 +68,7 @@
                 justify-content: space-around;
 
                 .footer__redes {
-                    display: flex;
-                    flex-direction: column;
+                    @include flex(flex, null, null, column);
 
                     .footer__icon {
                         margin: 5px;
@@ -107,6 +92,10 @@
 
 @media screen and (max-width: 600px) {
     body {
+
+        .d-flex {
+            width: 55% !important;
+        }
 
         .header__contenedor {
             flex-direction: column;
@@ -177,16 +166,9 @@
                 }
             }
         }
-        .form {
-        
-            .datos {
-        
-                &__contenedor {
-            
-                    .datos__form {
-                        width: 250px;
-                    }
-                }
+        .datos {
+            .datos__contenedor {
+                width: 85%;
             }
         }
     }
@@ -194,6 +176,10 @@
 
 @media screen and (max-width: 375px) {
     body {
+
+        .d-flex {
+            width: 75% !important;
+        }
 
         .header__contenedor {
     
@@ -212,8 +198,7 @@
                         width: 80%;
                     }
                     .hero__parrafos {
-                        padding: 0;
-                        margin: 0;
+                        @include box-size(0, 0);
                     }
                 }
                 .hero__videoMarcaYt {
@@ -221,8 +206,7 @@
             
                     .hero__videoMarcaYt-parrafo {
                         width: 80%;
-                        margin: 0;
-                        padding: 0;
+                        @include box-size(0, 0);
                     }
                     .videoYt {
                         width: 80%;
@@ -235,8 +219,7 @@
         // }
         
         .hero__img, .carouselBs__img {
-            width: 100%;
-            height: auto;
+            @include sizes(100%, auto);
         }
         .carouselBs__parrafo {
             width: auto;
@@ -256,6 +239,11 @@
                 .footer__logo {
                     margin: 0 0 15px 0;
                 }
+            }
+        }
+        .datos {
+            .datos__contenedor {
+                width: 90%;
             }
         }
     }

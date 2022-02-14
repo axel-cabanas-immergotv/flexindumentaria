@@ -5,24 +5,21 @@ body {
     main {
         .hero__acercaDe-inicio-contenedor {
             @extend .hero__inicio-contenedor;
-            background: url(../assets/diseño1.jpg) no-repeat fixed center center/cover;
+            background: url(../assets/diseño1.jpg) no-repeat fixed center/cover;
 
 
             .hero__aboutUs-titulo2 {
+                @include text(35px, 600, null, 1.3, null);
                 margin: 60px;
-                color: #fff;
-                font-size: 35px;
-                font-weight: 600;
-                line-height: 1.3;
+                color: $colorWhite;
             }
             
             .hero__inicio-text {
         
                 .hero__texto-aboutUs {
+                    @include text(16px, 700, null, null, null);
                     margin: 30px 6px;
-                    color: #fff;
-                    font-size: 16px;
-                    font-weight: 700;
+                    color: $colorWhite;
                 }
             }
         }

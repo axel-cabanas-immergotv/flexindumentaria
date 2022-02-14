@@ -20,7 +20,7 @@
                 padding: 0 20px;
                 color: $colorBg;
                 text-decoration: none;
-                @include text(18px, 600, null, null);
+                @include text(18px, 600, null, null, null);
             }
             .header__items:hover {
                 color: $colorWhite;

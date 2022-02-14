@@ -15,9 +15,10 @@
     margin: $margin;
 }
 
-@mixin text($size, $weight, $letter-spacing, $line-height) {
+@mixin text($size, $weight, $letter-spacing, $line-height, $text-align) {
     font-size: $size;
     font-weight: $weight;
     letter-spacing: $letter-spacing;
     line-height: $line-height;
+    text-align: $text-align;
 }
