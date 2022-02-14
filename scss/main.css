@@ -387,7 +387,7 @@ main .carousel-container .carouselBs__parrafo {
 
 @media screen and (max-width: 600px) {
   body .d-flex {
-    width: 55% !important;
+    width: 70% !important;
   }
   body .header__contenedor {
     -webkit-box-orient: vertical;
