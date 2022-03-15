@@ -11,7 +11,10 @@ heroParrafo.innerText += `
 //Entrada del usuario mediante el prompt y mostrado en el HTML
 const mensaje = prompt('Escribe el texto que quieras y aparecerá debajo de los osos escandalosos :)');
 
-if(mensaje != ''){
+if(mensaje){
     heroContenedor.innerHTML += ` 
-    <h1 class= "color-blanco">${mensaje}</h1>`; 
+    <h2 class= "color-blanco">${mensaje}</h2>`; 
+} else {
+    heroContenedor.innerHTML += ` 
+    <h2 class= "color-blanco">No hay mensaje</h2>`; 
 }
