@@ -9,6 +9,7 @@ main {
             z-index: 1;
             background: url(../assets/diseño3.jpg) no-repeat fixed center/cover;
             
+
             &::after {
                 position: absolute;
                 content: '';
@@ -60,6 +61,7 @@ main {
                     }
                 }
             }
+            
         }
         .hero__videos {
             color: $colorWhite;

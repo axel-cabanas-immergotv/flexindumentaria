@@ -810,4 +810,14 @@ body main .hero__acercaDe-inicio-contenedor .hero__inicio-text .hero__texto-abou
   margin: 30px 6px;
   color: #fff;
 }
+
+.new-img {
+  display: flex;
+  margin: 0 auto;
+}
+
+.color-blanco {
+  color: #fff;
+  text-align: center;
+}
 /*# sourceMappingURL=main.css.map */
