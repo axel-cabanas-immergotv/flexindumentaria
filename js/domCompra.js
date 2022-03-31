@@ -2,6 +2,7 @@ let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
 const contenedorTienda = document.getElementById('tienda');
 const contenedorCarrito = document.getElementById('carrito');
+const btnCarrito = document.getElementById('btnCarrito');
 const rellenarCarrito = (arrayCarrito) => {
     const tbody = document.querySelector('#tbody');
     const tFooter = document.createElement('tr');
@@ -42,7 +43,6 @@ const botonesEliminarListener = () => {
 
     botonesEliminar.forEach(elemento => {
         elemento.onclick = (e) => {
-            
             const indice = carrito.findIndex(producto => producto.id == e.target.id)
             carrito.splice(indice, 1);
             localStorage.setItem('carrito', JSON.stringify(carrito));
@@ -58,7 +58,6 @@ for(const producto of productos){
     const imgProducto = document.createElement('img');
     const nombreProducto = document.createElement('p');
     const precioProducto = document.createElement('p');
-    // const botonComprar = document.createElement('button');
 
     contenedorProducto.className = 'hero__fullImg col-lg-4 col-sm-6';
     divProducto.className = 'hero__img-compra';
@@ -66,25 +65,23 @@ for(const producto of productos){
     imgProducto.className = 'hero__img img-fluid';
     nombreProducto.className = 'compra__parrafo';
     precioProducto.className = 'compra__precio';
-    // botonComprar.className = 'btn btn-primary';
 
     imgProducto.src = producto.img;
     nombreProducto.append(producto.nombre);
     precioProducto.append(`$${producto.precio}`);
-    // botonComprar.append('Comprar');
     link.id = `${producto.id}`;
 
     link.onclick = (e) => {
         const productoComprado = productos.find(producto => producto.id === link.id);
         const indice = carrito.findIndex(producto => producto.id == e.currentTarget.id);
-                
-        if(indice === -1){
+        const carritoUser = ()=>{
             carrito.push({ nombre: productoComprado.nombre, precio: productoComprado.precio, cantidad: productoComprado.cantidad, subtotal: productoComprado.precio , id: productoComprado.id });
-            
-        } else {
+        }
+        const carritoCantidadUser = ()=>{
             carrito[indice].cantidad++;
             carrito[indice].subtotal = carrito[indice].precio * carrito[indice].cantidad;
         }
+        indice === -1 ? carritoUser() : carritoCantidadUser();
         rellenarCarrito(carrito);
         localStorage.setItem('carrito', JSON.stringify(carrito));
     }

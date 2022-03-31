@@ -16,8 +16,8 @@ const productos = [
     
     { 
     id: '3', 
-    nombre: 'Remera Reebok'
-    , precio: 4000, 
+    nombre: 'Remera Reebok', 
+    precio: 4000, 
     cantidad: 1 , 
     img: '../assets/galeria10.jpg' 
     },
@@ -46,3 +46,7 @@ const productos = [
     img: '../assets/galeria7.jpg' 
     },
 ]
+
+const desestructurar = (item) => {
+    const [{id, nombre, precio, cantidad}] = productos;
+}
