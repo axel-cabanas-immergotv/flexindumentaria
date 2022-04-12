@@ -9,15 +9,15 @@ body {
     }
     
     .btnBs-colors {
-        color: rgb(176, 158, 128) ;
-        border-color: rgb(176, 158, 128) ;
+        color: $colorBlack;
+        border-color: $colorBlack;
         margin: auto ;
     }
     
     .btnBs-colors:hover {
-        color: #fff ;
-        background-color: rgb(176, 158, 128) ;
-        border-color: rgb(176, 158, 128) ;
+        color: $colorBg ;
+        background-color: $colorBlack;
+        border-color: $colorBlack;
     }
     
     .btnBs-border {
@@ -26,7 +26,7 @@ body {
     }
     
     .btnBs-margin {
-        width: 50%;
+        width: 35%;
         margin: 0 auto;
     }
 }

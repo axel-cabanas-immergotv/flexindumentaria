@@ -1,8 +1,24 @@
 @import "./mixins";
 @import "./variables";
 @import "./BS-styles";
+@import "./header";
 
 body {
+
+    .header__menu-compra {
+
+        & a {
+            padding: 0;
+            color: $colorBg;
+            text-decoration: none;
+            @include text(18px, 600, null, null, null);
+    
+            
+        }
+        & a:hover {
+            color: $colorWhite;
+        }
+    }
 
     .bg-compra {
         background-color: $colorBg;
@@ -57,6 +73,9 @@ body {
     .row {
         --bs-gutter-x: 0 !important;
     }
+    
+    
+
     
 }
 

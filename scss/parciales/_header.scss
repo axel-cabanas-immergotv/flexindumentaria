@@ -17,7 +17,6 @@
         .header__menu {
 
             & a {
-                padding: 0 20px;
                 color: $colorBg;
                 text-decoration: none;
                 @include text(18px, 600, null, null, null);

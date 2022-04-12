@@ -1,3 +1,4 @@
+localStorage.getItem('productos');
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
 const contenedorTienda = document.getElementById('tienda');
@@ -69,11 +70,12 @@ for(const producto of productos){
     imgProducto.src = producto.img;
     nombreProducto.append(producto.nombre);
     precioProducto.append(`$${producto.precio}`);
-    link.id = `${producto.id}`;
+    divProducto.id = `${producto.id}`;
 
-    link.onclick = (e) => {
-        const productoComprado = productos.find(producto => producto.id === link.id);
+    divProducto.onclick = (e) => {
+        const productoComprado = productos.find(producto => producto.id === divProducto.id);
         const indice = carrito.findIndex(producto => producto.id == e.currentTarget.id);
+        debugger
         const carritoUser = ()=>{
             carrito.push({ nombre: productoComprado.nombre, precio: productoComprado.precio, cantidad: productoComprado.cantidad, subtotal: productoComprado.precio , id: productoComprado.id });
         }
