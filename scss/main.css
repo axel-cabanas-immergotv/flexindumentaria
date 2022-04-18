@@ -1191,4 +1191,7 @@ body .contenedor-logeo .contenedor__todo .contenedor__login-register form button
   line-height: 2;
   font-size: 20px;
 }
+.dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.671) !important;
+}
 /*# sourceMappingURL=main.css.map */

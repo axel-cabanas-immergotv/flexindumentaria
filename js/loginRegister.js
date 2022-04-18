@@ -8,12 +8,13 @@ const formRegister = document.getElementById('formRegister');
 const nombre = document.getElementById('nombre');
 const mail = document.getElementById('mail');
 const pass = document.getElementById('password');
+const btnLogin = document.getElementById('login');
 const btnRegistro = document.getElementById('registro');
 const parrafo = document.getElementById('warnings');
 const formLogin = document.getElementById('formLogin');
 const mailRegistrado = document.getElementById('mailRegistrado');
 const passRegistrado = document.getElementById('passRegistrado');
-let parrafo2 = document.getElementById('warnings2');
+let parrafo2 =  document.getElementById('warnings2');
 const errexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 const usuarios =JSON.parse(localStorage.getItem('usuarios')) || [];
 
@@ -26,6 +27,7 @@ document.getElementById('btn__registrarse').addEventListener('click', anchoRegis
 window.addEventListener('resize', anchoPagina);
 formRegister.addEventListener('submit', register);
 formLogin.addEventListener('submit', login);
+
 
     //FUNCIONES
 
@@ -87,7 +89,6 @@ function register (e){
     e.preventDefault();
     parrafo.style.color = 'red';
     let entrar = false;
-
     if(nombre.value === ''){
         warnings += `Ingrese un nombre <br>`;
         entrar = true;
@@ -124,42 +125,39 @@ function login (e){
     passCorrecta = usuarios.find(usuario => usuario.pass === passRegistrado.value && usuario.mail === mailRegistrado.value);
     parrafo2.style.color = 'red';
     let entrar = false;
-
     e.preventDefault();
-    for(const user of usuarios){
-        if(!usuarioRegistrado){
-            warnings += `Email incorrecto <br>`;
-            entrar = true;
-        }
-        if(!passCorrecta){
-            warnings += `Contraseña incorrecta`;
-            entrar = true;
-        }
-        if(entrar){
-            parrafo2.innerHTML = warnings;
-            break;
-        } else {
-            parrafo2.innerHTML = '';
-            parrafo2.style.color = 'green';
-            parrafo2.innerHTML = `¡Bienvenido ${usuarioRegistrado.nombre}!`;
-            setTimeout(() => {
-                document.getElementById('cierre').click();
-                const cambioLogin = document.getElementById('login-change');
-                cambioLogin.className += ' dropdown';
-                cambioLogin.innerHTML = `
-                    <a class=" dropdown-toggle" href="#" id="navbarDropdown cierre" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        ${usuarioRegistrado.nombre}
+
+    if(!usuarioRegistrado){
+        warnings += `Email incorrecto <br>`;
+        entrar = true;
+    }
+    if(!passCorrecta){
+        warnings += `Contraseña incorrecta`;
+        entrar = true;
+    }
+    if(entrar){
+        parrafo2.innerHTML = warnings;
+    } else {
+        parrafo2.innerHTML =  '';
+        parrafo2.style.color = 'green';
+        parrafo2.innerHTML = `¡Bienvenido ${usuarioRegistrado.nombre}!`;
+        setTimeout(() => {
+            document.getElementById('cierre').click();
+            const cambioLogin = document.getElementById('login-change');
+            cambioLogin.className += ' dropdown';
+            cambioLogin.innerHTML = `
+                <a class=" dropdown-toggle" href="#" id="navbarDropdown cierre" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    ${usuarioRegistrado.nombre}
+                </a>
+                <div class="dropdown-menu text__aling2" aria-labelledby="navbarDropdown">
+                    <a data-bs-toggle="modal" href="#exampleModalCenter">
+                    Perfil
                     </a>
-                    <div class="dropdown-menu text__aling2" aria-labelledby="navbarDropdown">
-                        <a data-bs-toggle="modal" href="#exampleModalCenter">
-                        Perfil
-                        </a>
-                        <a class="dropdown-item" href="#">Configuracion</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Cerrar sesion</a>
-                    </div>`
+                    <a class="dropdown-item" href="#">Configuracion</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Cerrar sesion</a>
+                </div>`
             }, 1000)
-        }
+            localStorage.setItem('login', JSON.stringify(cambioLogin));
     }
 }
-
