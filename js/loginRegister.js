@@ -1,9 +1,22 @@
 //Declarando variables
+const cambioLogin = document.getElementById('login-change');
+const loginLS = localStorage.getItem('login');
+const guardarLogin = () => {
+    if(loginLS){
+        cambioLogin.className += ' dropdown';
+        cambioLogin.innerHTML = loginLS;
+    } else {
+        cambioLogin.innerHTML = loginChange;
+    }
+}
+guardarLogin();
 const formularioLogin = document.querySelector('.formulario__login');
 const formularioRegister = document.querySelector('.formulario__register');
 const contenedorLoginRegister = document.querySelector('.contenedor__login-register');
 const cajaTraseraLogin = document.querySelector('.caja__trasera-login');
 const cajaTraseraRegister = document.querySelector('.caja__trasera-register');
+const btnIniciarSesion = document.getElementById('btn__iniciar-sesion');
+const btnRegistrarse = document.getElementById('btn__registrarse');
 const formRegister = document.getElementById('formRegister');
 const nombre = document.getElementById('nombre');
 const mail = document.getElementById('mail');
@@ -22,11 +35,15 @@ const usuarios =JSON.parse(localStorage.getItem('usuarios')) || [];
 
 
 //Ejecutando funciones
-document.getElementById('btn__iniciar-sesion').addEventListener('click', anchoLogin);
-document.getElementById('btn__registrarse').addEventListener('click', anchoRegister);
+
+btnIniciarSesion.addEventListener('click', anchoLogin);
+btnRegistrarse.addEventListener('click', anchoRegister);
 window.addEventListener('resize', anchoPagina);
 formRegister.addEventListener('submit', register);
 formLogin.addEventListener('submit', login);
+
+
+
 
 
     //FUNCIONES
@@ -85,7 +102,6 @@ function anchoRegister(){
 function register (e){
     let warnings = '';
     const usuarioRegistrado = usuarios.find(user => user.mail === mail.value);
-    console.log(usuarioRegistrado)
     e.preventDefault();
     parrafo.style.color = 'red';
     let entrar = false;
@@ -143,7 +159,6 @@ function login (e){
         parrafo2.innerHTML = `¡Bienvenido ${usuarioRegistrado.nombre}!`;
         setTimeout(() => {
             document.getElementById('cierre').click();
-            const cambioLogin = document.getElementById('login-change');
             cambioLogin.className += ' dropdown';
             cambioLogin.innerHTML = `
                 <a class=" dropdown-toggle" href="#" id="navbarDropdown cierre" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -155,9 +170,16 @@ function login (e){
                     </a>
                     <a class="dropdown-item" href="#">Configuracion</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Cerrar sesion</a>
+                    <a class="dropdown-item" href="#" id="cerrar-sesion">Cerrar sesion</a>
                 </div>`
+
+                localStorage.setItem('login', cambioLogin.innerHTML);
+
             }, 1000)
-            localStorage.setItem('login', JSON.stringify(cambioLogin));
     }
+}
+document.getElementById('cerrar-sesion').addEventListener('submit', cerrarSesion);
+
+function cerrarSesion () {
+    cambioLogin.innerHTML = loginChange;
 }
