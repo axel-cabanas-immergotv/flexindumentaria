@@ -29,34 +29,63 @@
                     <li class="nav-item p-3">
                       <a class=" header__items" href="./acercaDe.html">Acerca de</a>
                     </li>
-                    <li class="nav-item p-3" id="login-change">
-                      
-                    </li>
-                  </ul>
-                  
-                  
-                  <!-- Modal -->
-                  <!-- <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
-                          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
-                        <div class="modal-body" id="datos">
-                          <ul id="lista" class="lista-js">
+                    <li class="nav-item p-3">
+                      <div id="login">
 
-                          </ul>
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      </div>
+                      
+                      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="btn-close" id="cierre" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="contenedor-logeo">
+                                <div class="contenedor__todo">
+                                  <div class="caja__trasera">
+                                      <div class="caja__trasera-login">
+                                          <h3>¿Ya tienes una cuenta?</h3>
+                                          <p>Inicia sesión para entrar en la página</p>
+                                          <button id="btn__iniciar-sesion">Iniciar Sesión</button>
+                                      </div>
+                                      <div class="caja__trasera-register">
+                                          <h3>¿Aún no tienes una cuenta?</h3>
+                                          <p>Regístrate para que puedas iniciar sesión</p>
+                                          <button id="btn__registrarse">Regístrarse</button>
+                                      </div>
+                                  </div>
+                                  
+                                  <!--Formulario de Login y registro-->
+                                  <div class="contenedor__login-register">
+                                      <!--Login-->
+                                      <form action="" class="formulario__login" id="formLogin">
+                                          <h2>Iniciar Sesión</h2>
+                                          <input type="text" id="mailRegistrado" placeholder="Correo Electronico">
+                                          <input type="password" id="passRegistrado" placeholder="Contraseña">
+                                          <button>Entrar</button>
+                                          <p id="warnings2"></p>
+                                      </form>
+
+                                      <!--Register-->
+                                      <form action="" class="formulario__register" id="formRegister">
+                                          <h2>Crea una cuenta</h2>
+                                          <input id="nombre" type="text" placeholder="Nombre">
+                                          <input id="mail" type="text" placeholder="Correo Electronico">
+                                          <input type="password" id="password" placeholder="Contraseña">
+                                          <button id="registro">Regístrarse</button>
+                                          <p id="warnings"></p>
+                                      </form>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                            </div>
+                            <video src="../assets/bg-video.mp4" muted autoplay loop></video>
                         </div>
                       </div>
-                    </div>
-                  </div> -->
-                  
+                    </li>
+                  </ul>
                   <div class="modal fade" id="exampleModalCenter" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalCenter" aria-hidden="true">
                     <div class="modal-dialog">
                       <div class="modal-content">
@@ -80,40 +109,7 @@
                 </div>
                 <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop2" id="btnCarrito">
                   <img src="https://img.icons8.com/material-outlined/96/ffffff/shopping-cart--v1.png 2x" width="40px" height="40px" alt="">
-                </button>  
-                <!-- Modal -->
-                  <!-- <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                          <div class="carrito" id="carrito">
-
-                          </div>
-                          <h1 class="text-center">CARRITO</h1>
-                          <div class="bd-example">
-                            <table class="table table-hover text-center container-principal">
-                              <thead>
-                                <tr>
-                                  <th>Nombre</th>
-                                  <th>Precio</th>
-                                  <th>Cantidad</th>
-                                  <th>Subtotal</th>
-                                  <th></th>
-                                  <tbody id="tbody"></tbody>
-                                </tr>
-                              </thead>
-                            </table>
-                          </div>
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ok</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div> -->
+                </button>
               </nav>
         </div>
     </header>
@@ -127,24 +123,6 @@
                 
             </article>
         </section>
-        <!-- <div class="carrito" id="carrito">
-
-        </div>
-        <h1 class="text-center">CARRITO</h1>
-        <div class="bd-example">
-          <table class="table table-hover text-center container-principal">
-            <thead>
-              <tr>
-                <th>Nombre</th>
-                <th>Precio</th>
-                <th>Cantidad</th>
-                <th>Subtotal</th>
-                <th></th>
-                <tbody id="tbody"></tbody>
-              </tr>
-            </thead>
-          </table>
-        </div> -->
     </main>
     <footer class="seccion__padding">
         <section class="footer__cont container-principal">
@@ -172,4 +150,3 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11" async></script>
 </body>
 </html>
- 
